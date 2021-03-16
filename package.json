@@ -18,6 +18,7 @@
     "typescript",
     "chakra-ui",
     "docker",
+    "pwa",
     "eslint",
     "prettier",
     "husky",
