@@ -1,9 +1,7 @@
-import {
-  Flex, Heading, Link, Text, Code, Img,
-} from '@chakra-ui/react';
+import { Flex, Heading, Link, Text, Code, Img } from '@chakra-ui/react';
 import styled from '@emotion/styled';
 
-import Nav from '../components/nav';
+import Nav from 'components/nav';
 
 const LinkCustom = styled(Link)`
   margin: 1rem;
@@ -42,8 +40,7 @@ export default function Home() {
         justify="center"
       >
         <Heading as="h1" size="2xl" marginBottom="5" textAlign="center">
-          Welcome to
-          {' '}
+          Welcome to{' '}
           <Link href="https://nextjs.org" color="blue.500">
             Next.js
           </Link>
@@ -58,9 +55,7 @@ export default function Home() {
         </Heading>
 
         <Text as="p" fontSize="xl" textAlign="center">
-          Get started by editing
-          {' '}
-          <Code fontSize="xl">pages/index.tsx</Code>
+          Get started by editing <Code fontSize="xl">pages/index.tsx</Code>
         </Text>
 
         <Flex
