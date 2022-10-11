@@ -19,7 +19,7 @@ You can check [demo](https://next-typescript-chakra-ui-starter.vercel.app/)
 
 ## Usage
 
-This project using node >= 12.13.0 & yarn
+This project using node >= 14.19.2 & yarn
 
 ### Installation
 
