@@ -1,9 +1,13 @@
-import { Flex, Heading, Link, Text, Code, Img } from '@chakra-ui/react';
+import { Box, Heading, LinkOverlay, Text, Code } from '@chakra-ui/react';
 import styled from '@emotion/styled';
+import Image from 'next/image';
+import { Inter } from 'next/font/google';
 
-import Nav from 'components/nav';
+import Nav from '@/components/nav';
 
-const LinkCustom = styled(Link)`
+const inter = Inter({ subsets: ['latin'] });
+
+const LinkCustom = styled(LinkOverlay)`
   margin: 1rem;
   padding: 1.5rem;
   width: 300px;
@@ -23,48 +27,52 @@ const LinkCustom = styled(Link)`
 
 export default function Home() {
   return (
-    <Flex
+    <Box
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      justifyContent="center"
       minHeight="100vh"
       padding="0 0.5rem"
-      direction="column"
-      align="center"
-      justify="center"
+      className={inter.className}
     >
       <Nav />
 
-      <Flex
-        padding="5rem 0"
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
         flex="1"
-        direction="column"
-        align="center"
-        justify="center"
+        padding="5rem 0"
       >
         <Heading as="h1" size="2xl" marginBottom="5" textAlign="center">
           Welcome to{' '}
-          <Link href="https://nextjs.org" color="blue.500">
+          <LinkOverlay href="https://nextjs.org" color="blue.500">
             Next.js
-          </Link>
+          </LinkOverlay>
           {' + '}
-          <Link href="https://www.typescriptlang.org" color="blue.500">
+          <LinkOverlay href="https://www.typescriptlang.org" color="blue.500">
             Typescript
-          </Link>
+          </LinkOverlay>
           {' + '}
-          <Link href="https://chakra-ui.com" color="blue.500">
+          <LinkOverlay href="https://chakra-ui.com" color="blue.500">
             Chakra UI!
-          </Link>
+          </LinkOverlay>
         </Heading>
 
         <Text as="p" fontSize="xl" textAlign="center">
           Get started by editing <Code fontSize="xl">pages/index.tsx</Code>
         </Text>
 
-        <Flex
+        <Box
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          flexWrap="wrap"
           maxWidth="800px"
           width={{ sm: '100%' }}
           marginTop="3rem"
-          flexWrap="wrap"
-          align="center"
-          justify="center"
         >
           <LinkCustom href="https://nextjs.org/docs">
             <Heading as="h3" size="xl">
@@ -101,33 +109,29 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </Text>
           </LinkCustom>
-        </Flex>
-      </Flex>
+        </Box>
+      </Box>
 
-      <Flex
+      <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
         width="100%"
         height="100px"
         borderTop="1px solid #eaeaea"
-        align="center"
-        justify="center"
       >
-        <Link
+        <LinkOverlay
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
           display="flex"
           justifyContent="center"
           alignItems="center"
-          _hover={{ textDecoration: 'none' }}
-          isExternal
         >
           Powered by
-          <Img
-            src="/vercel.svg"
-            alt="Vercel Logo"
-            marginLeft="0.5rem"
-            height="1rem"
-          />
-        </Link>
-      </Flex>
-    </Flex>
+          <Image src="/vercel.svg" alt="Vercel Logo" width={70} height={70} />
+        </LinkOverlay>
+      </Box>
+    </Box>
   );
 }
