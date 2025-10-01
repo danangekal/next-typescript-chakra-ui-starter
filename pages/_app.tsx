@@ -1,9 +1,10 @@
-import { AppProps /* , AppContext */ } from 'next/app';
 import { ChakraProvider } from '@chakra-ui/react';
+import type { AppProps /* , AppContext */ } from 'next/app';
+import { system } from '@/styles/theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider>
+    <ChakraProvider value={system}>
       <Component {...pageProps} />
     </ChakraProvider>
   );

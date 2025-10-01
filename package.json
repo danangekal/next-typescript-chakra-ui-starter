@@ -1,7 +1,7 @@
 {
   "name": "next-typescript-chakra-ui-starter",
   "version": "0.1.0",
-  "description": "Unofficial Next.js + Typescript + Chakra UI starter with a latest package",
+  "description": "Next.js 15 + React 19 + TypeScript + Chakra UI 3 starter with latest packages",
   "author": "Danang Eko Alfianto <github.com/danangekal>",
   "homepage": "https://github.com/danangekal/next-typescript-chakra-ui-starter#readme",
   "repository": {
@@ -19,47 +19,43 @@
     "chakra-ui",
     "docker",
     "pwa",
-    "eslint",
-    "prettier",
+    "biome",
     "husky",
     "lint-staged"
   ],
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "telemetry": "next telemetry",
-    "lint": "next lint",
-    "format": "prettier --ignore-path .gitignore \"**/*.+(js|ts|tsx|css|scss)\" --write",
-    "prepare": "husky install",
+    "lint": "biome lint .",
+    "format": "biome format --write .",
+    "check": "biome check --write .",
+    "prepare": "husky",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable"
   },
   "dependencies": {
-    "@chakra-ui/next-js": "^2.1.5",
-    "@chakra-ui/react": "^2.8.1",
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "framer-motion": "^10.16.4",
-    "next": "^13.5.4",
+    "@chakra-ui/react": "^3.2.2",
+    "@emotion/react": "^11.14.0",
+    "next": "^15.5.0",
     "next-pwa": "^5.6.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@types/node": "^20.8.6",
-    "@types/react": "^18.2.28",
-    "@types/react-dom": "^18.2.13",
-    "eslint": "^8.51.0",
-    "eslint-config-next": "^13.5.4",
-    "eslint-config-prettier": "^9.0.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^14.0.1",
+    "@biomejs/biome": "^2.2.4",
+    "@types/node": "^22.10.5",
+    "@types/react": "^19.0.6",
+    "@types/react-dom": "^19.0.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.11",
     "pinst": "^3.0.0",
-    "prettier": "^3.0.3",
-    "typescript": "^5.2.2"
+    "typescript": "^5.7.2"
   },
   "engines": {
-    "node": ">=16.14"
-  }
+    "node": ">=22.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@10.0.0+sha512.b8fef5494bd3fe4cbd4edabd0745df2ee5be3e4b0b8b08fa643aa3e4c6702ccc0f00d68fa8a8c9858a735a0032485a44990ed2810526c875e416f001b17df12b"
 }

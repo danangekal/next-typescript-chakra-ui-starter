@@ -6,39 +6,38 @@ You can check [demo](https://next-typescript-chakra-ui-starter.vercel.app/)
 
 ## Features
 
-- [React.js 18](https://reactjs.org/blog/2022/03/29/react-v18.html) - Blog introduce react v18.0.
-- [Next.js 13](https://nextjs.org/blog/next-13) - Blog introduce next.js 13.
+- [React.js 19](https://react.dev/blog/2024/12/05/react-19) - Latest stable React version.
+- [Next.js 15](https://nextjs.org/blog/next-15) - Latest Next.js with improved performance.
 - [Typescript 5](https://www.typescriptlang.org/) - Documentation of typescript.
 - [Next PWA 5](https://www.npmjs.com/package/next-pwa) - Documentation of next pwa.
-- [Chakra UI 2](https://chakra-ui.com/) - Documentation of chakra ui.
+- [Chakra UI 3](https://chakra-ui.com/) - Latest Chakra UI with new design system.
 - [Docker](https://docs.docker.com/) - Documentation of Docker.
-- [Eslint 8](https://eslint.org/docs/user-guide/getting-started) - Documentation of eslint.
-- [Prettier 3](https://prettier.io/docs/en/index.html) - Documentation of prettier.
-- [Husky 8](https://typicode.github.io/husky/#/) - Documentation of husky.
-- [Lint Staged 14](https://github.com/okonet/lint-staged) - Documentation of lint staged.
+- [Biome 2](https://biomejs.dev/) - Fast formatter and linter for JavaScript and TypeScript.
+- [Husky 9](https://typicode.github.io/husky/#/) - Documentation of husky.
+- [Lint Staged 15](https://github.com/okonet/lint-staged) - Documentation of lint staged.
 
 ## Usage
 
-This project using node >= 16.14 & yarn 1.22.19
+This project using Node.js >= 22.0.0 (Active LTS) & pnpm >= 9.0.0
 
 ### Installation
 
 ```bash
 git clone https://github.com/danangekal/next-typescript-chakra-ui-starter.git
-yarn install
+pnpm install
 ```
 
 #### Development
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 #### Production
 
 ```bash
-npm run build or yarn build
-yarn start
+pnpm build
+pnpm start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
