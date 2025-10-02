@@ -42,9 +42,6 @@ importers:
       lint-staged:
         specifier: ^16.2.3
         version: 16.2.3
-      pinst:
-        specifier: ^3.0.0
-        version: 3.0.0
       serwist:
         specifier: ^9.2.1
         version: 9.2.1(typescript@5.9.3)
@@ -1028,11 +1025,6 @@ packages:
   pidtree@0.6.0:
     resolution: {integrity: sha512-eG2dWTVw5bzqGRztnHExczNxt5VGsE6OwTeCG3fdUf9KBsZzO3R5OIIIzWR+iZA0NtZ+RDVdaoE2dK1cn6jH4g==}
     engines: {node: '>=0.10'}
-    hasBin: true
-
-  pinst@3.0.0:
-    resolution: {integrity: sha512-cengSmBxtCyaJqtRSvJorIIZXMXg+lJ3sIljGmtBGUVonMnMsVJbnzl6jGN1HkOWwxNuJynCJ2hXxxqCQrFDdw==}
-    engines: {node: '>=12.0.0'}
     hasBin: true
 
   postcss@8.4.31:
@@ -2502,8 +2494,6 @@ snapshots:
   picomatch@2.3.1: {}
 
   pidtree@0.6.0: {}
-
-  pinst@3.0.0: {}
 
   postcss@8.4.31:
     dependencies:
