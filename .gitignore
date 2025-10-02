@@ -37,6 +37,6 @@ pnpm-debug.log*
 # package lock
 package-lock.json
 
-# PWA
-public/sw.js
+# PWA (generated service worker files)
+public/sw*.js
 public/workbox*
