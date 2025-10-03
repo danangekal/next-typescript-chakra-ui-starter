@@ -9,7 +9,7 @@ You can check [demo](https://next-typescript-chakra-ui-starter.vercel.app/)
 - [React.js 19](https://react.dev/blog/2024/12/05/react-19) - Latest stable React version.
 - [Next.js 15](https://nextjs.org/blog/next-15) - Latest Next.js with improved performance.
 - [Typescript 5](https://www.typescriptlang.org/) - Documentation of typescript.
-- [Next PWA 5](https://www.npmjs.com/package/next-pwa) - Documentation of next pwa.
+- [Serwist 9](https://serwist.pages.dev/) - Modern PWA toolkit for Next.js with service worker support.
 - [Chakra UI 3](https://chakra-ui.com/) - Latest Chakra UI with new design system.
 - [Docker](https://docs.docker.com/) - Documentation of Docker.
 - [Biome 2](https://biomejs.dev/) - Fast formatter and linter for JavaScript and TypeScript.
@@ -75,6 +75,31 @@ You can use images available on docker hub [next-typescript-chakra-ui-starter](h
 ```bash
 docker pull danangekal/next-typescript-chakra-ui-starter
 ```
+
+## CI/CD
+
+This project uses GitHub Actions for continuous integration and deployment. The pipeline consists of three jobs:
+
+### 1. Lint and Test
+- Runs Biome linter checks (`pnpm lint`)
+- Runs Biome format and import organization checks (`pnpm check`)
+- Ensures code quality standards are met
+
+### 2. Build
+- Builds the Next.js application (`pnpm build`)
+- Runs after linting passes successfully
+- Verifies the application can be built without errors
+
+### 3. Docker
+- Builds and pushes Docker image to Docker Hub
+- Only runs on pushes to the `main` branch
+- Uses GitHub Actions cache for faster builds
+- Image available at: [danangekal/next-typescript-chakra-ui-starter](https://hub.docker.com/r/danangekal/next-typescript-chakra-ui-starter)
+
+The workflow is triggered on:
+- Push to `main` branch
+- Pull requests to `main` branch
+- Manual workflow dispatch
 
 ## Learn More
 

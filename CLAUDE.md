@@ -25,6 +25,16 @@ docker run --rm -it -p 3000:3000 next-typescript-chakra-ui-starter
 docker-compose up     # Alternative using docker-compose
 ```
 
+### CI/CD
+GitHub Actions workflow (`.github/workflows/main.yml`):
+- **Triggers**: Push/PR to main branch, manual dispatch
+- **Jobs**:
+  1. `lint-and-test`: Biome checks (`pnpm lint`, `pnpm check`)
+  2. `build`: Next.js build (`pnpm build`)
+  3. `docker`: Build & push to Docker Hub (main branch only)
+- **Cache**: Uses GitHub Actions cache for Docker layers
+- **Requirements**: Node.js 22, pnpm with frozen lockfile
+
 ## Architecture
 
 ### Project Structure
